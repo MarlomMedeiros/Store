@@ -9,21 +9,24 @@
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^2.14.1",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "livewire/livewire": "^2.10"
     },
     "require-dev": {
+        "brianium/paratest": "^6.2",
         "fakerphp/faker": "^1.9.1",
-        "friendsofphp/php-cs-fixer": "^3.9",
+        "friendsofphp/php-cs-fixer": "^3.0",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.0.1",
+        "lucascudo/laravel-pt-br-localization": "^1.2",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
         "nunomaduro/larastan": "2.0",
-        "phpmd/phpmd": "^2.12",
+        "phpmd/phpmd": "^2.9",
         "phpstan/phpstan": "^1.8",
-        "phpunit/phpunit": "^9.5.10",
+        "phpunit/phpunit": "^9.3.3",
         "spatie/laravel-ignition": "^1.0",
-        "squizlabs/php_codesniffer": "^3.7.1",
+        "squizlabs/php_codesniffer": "^3.6",
         "vimeo/psalm": "^4.25"
     },
     "autoload": {
@@ -52,14 +55,20 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-        "fix": [
-            "vendor/bin/php-cs-fixer fix"
-        ],
         "neon": [
             "vendor/bin/phpstan analyse"
         ],
         "phpcs": [
             "vendor/bin/phpcs --standard=phpcs.xml"
+        ],
+        "fix": [
+            "./vendor/bin/php-cs-fixer fix --using-cache=no --verbose"
+        ],
+        "verify": [
+            "./vendor/bin/php-cs-fixer fix --dry-run --using-cache=no --verbose --stop-on-violation",
+            "./vendor/bin/phpcs --standard=phpcs.xml",
+            "./vendor/bin/phpmd app text ./phpmd.xml",
+            "./vendor/bin/phpunit"
         ]
     },
     "extra": {

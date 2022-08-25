@@ -1,3 +1,4 @@
+.php-cs-fixer.cache
 /node_modules
 /public/build
 /public/hot
@@ -14,3 +15,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/public/css
+/public/js
+/public/resources/js
+/public/mix-manifest.json

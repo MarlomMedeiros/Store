@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Auth\AccessAccount;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', App\Http\Livewire\Index\Index::class)->name('home');
+Route::get('/login', AccessAccount::class)->name('login');
+//
+//Route::get('/', function () {
+//    return view('livewire.index.index');
+//})->name('home');
+//
+//Route::get('/login', function () {
+//    return view('livewire.auth.login');
+//})->name('login');
