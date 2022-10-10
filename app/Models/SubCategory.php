@@ -10,7 +10,7 @@ class SubCategory extends Model
 {
     use HasFactory;
 
-    public function Category(): HasOne
+    public function category(): HasOne
     {
         return $this->hasOne(Category::class);
     }

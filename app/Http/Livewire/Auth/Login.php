@@ -32,7 +32,7 @@ class Login extends Component
 
     public function mount(): void
     {
-        $user = new User();
+        $this->user = new User();
     }
 
     public function submit(): void
@@ -59,8 +59,6 @@ class Login extends Component
             $this->dispatchBrowserEvent('redirect', ['url' => route('home')]);
         } else {
             $this->emitTo(Toast::class, 'showToast', ['message' => 'Senha incorreta', 'title' => 'Erro']);
-
-            return;
         }
     }
 }
