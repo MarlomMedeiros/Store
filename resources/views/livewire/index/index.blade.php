@@ -1,4 +1,4 @@
-<div>
+<div class="bg-black">
     <div>
         <img src="{{ asset('images/banner.jpg') }}" alt="banner" class="w-auto h-auto mx-auto">
     </div>
@@ -7,130 +7,33 @@
             Melhores Produtos
         </div>
         <div class="w-auto h-auto mx-10 flex flex-wrap justify-center">
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
+
+            @foreach($products as $product)
+                <x-store.product
+                        :img="$product->photo"
+                        :title="$product->name"
+                        :price="$product->price"
+                        :descont="'À vista no PIX'"
+                        :button="'Comprar'"
+                        :action="route ('product', ['product' => $product->id, 'name' => $product->name])"
+                />
+            @endforeach
 
             <div class="h-auto w-auto my-8 drop-shadow-lg">
                 <img src="{{ asset('images/banner2.jpg') }}" alt="banner" class="w-full h-auto items-center">
             </div>
 
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
-            <x-store.product
-                    :img="'images/product.jpg'"
-                    :title="'Processador AMD Ryzen 5 4500, Cachê 11MB, 3.6GHz (4.1GHz Max Turbo), AM4, Sem Vídeo - 100-100000644BOX'"
-                    :price="'R$ 719,99'"
-                    :descont="'À vista no PIX'"
-                    :button="'Comprar'"
-            />
+            @foreach($products as $product)
+                <x-store.product
+                        :img="$product->photo"
+                        :title="$product->name"
+                        :price="$product->price"
+                        :descont="'À vista no PIX'"
+                        :button="'Comprar'"
+                        :action="route ('product', ['product' => $product->id, 'name' => $product->name])"
+                />
+            @endforeach
+
         </div>
         <div class="w-auto h-auto flex justify-center font-semibold text-white items-center bg-[#0060b1]">
         </div>

@@ -2,7 +2,9 @@
 
 namespace App\Http\Livewire\Auth;
 
+use App\Http\Livewire\Toast;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class Register extends Component
@@ -16,12 +18,20 @@ class Register extends Component
     public function rules(): array
     {
         return [
-            'user.name'           => 'required|string|max:255',
-            'user.email'          => 'required|string|max:255|unique:users,email,' . $this->user->email,
-            'password'            => 'required|string',
-            'confirmPassword'     => 'required|string|same:password',
-            'user.identification' => 'required|string|min:11|unique:users,identification,' . $this->user->identification,
-            'user.cep'            => 'required|string:min:8',
+            'user.name'           => 'required|string|min:3|max:255',
+            'user.email'          => 'required|string|min:5|max:255|unique:users,email,' . $this->user->email,
+            'password'            => 'required|string|min:4|max:80',
+            'confirmPassword'     => 'required|string|min:4|same:password',
+            'user.identification' => 'required|string|min:11|max:20|unique:users,identification,' . $this->user->identification,
+            'user.cep'            => 'required|string|min:8|max:9',
+
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'confirmPassword.same' => 'As senhas não conferem',
         ];
     }
 
@@ -54,10 +64,26 @@ class Register extends Component
         $this->user->cep            = preg_replace('/[^0-9]/', '', $this->user->cep);
         $this->user->identification = preg_replace('/[^0-9]/', '', $this->user->identification);
         $this->user->password       = bcrypt($this->password);
+
         $this->user->save();
 
-        session()->flash('message', 'Conta criada com sucesso.');
+        Auth::login($this->user, true);
 
+        $this->emitTo(Toast::class, 'showToast', [
+            'message' => 'Usuário cadastrado com sucesso',
+            'title'   => 'Sucesso',
+        ]);
+
+        $this->user->name           = '';
+        $this->user->email          = '';
+        $this->user->cep            = '';
+        $this->user->identification = '';
+        $this->password             = '';
+        $this->confirmPassword      = '';
+
+        $this->resetErrorBag();
         $this->resetValidation();
+
+        $this->dispatchBrowserEvent('redirect', ['url' => route('home')]);
     }
 }

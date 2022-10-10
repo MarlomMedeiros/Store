@@ -3,18 +3,8 @@
         Já Tenho Conta
     </a>
 
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
-    <x-input :name="'label'" label="E-mail, CPF ou CNPJ *" :model="'user.email'" :placeholder="'E-mail, CPF ou CNPJ *'" type="text" autocomplete="email"/>
-    <x-input :name="'password2'" label="Senha" :model="'password'" :placeholder="'Senha *'" type="password" autocomplete="current-password"/>
+    <x-input :name="'email2'" label="E-mail, CPF ou CNPJ *" :model="'login'" :placeholder="'E-mail, CPF ou CNPJ *'" type="text" autocomplete="email"/>
+    <x-input :name="'password2'" label="Senha" :model="'password'" :placeholder="'Senha *'" type="current-password" autocomplete="current-password"/>
 
     <button class="border border-orange-500 rounded shadow h-12 my-5 uppercase font-bold hover:text-orange-600 text-orange-500" type="submit">
         <div class="flex items-center justify-center">
@@ -22,6 +12,17 @@
             Entrar
         </div>
     </button>
+    <div class="h-auto w-96">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+    </div>
     <a class="grid grid-cols-1 divide-y">
         <div class="flex items-center pb-8 text-xs justify-center uppercase font-semibold">
             <span class="text-orange-500 mx-3 cursor-pointer">Esqueci meu login</span>

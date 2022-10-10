@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\Auth\AccessAccount;
+use App\Http\Livewire\Product\Index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,11 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', App\Http\Livewire\Index\Index::class)->name('home');
 Route::get('/login', AccessAccount::class)->name('login');
-//
-//Route::get('/', function () {
-//    return view('livewire.index.index');
-//})->name('home');
-//
-//Route::get('/login', function () {
-//    return view('livewire.auth.login');
-//})->name('login');
+Route::get('/logout', function () {
+    Auth::logout();
+
+    return redirect()->route('home');
+})->name('logout');
+
+Route::get('/produto/{product}/{name}', Index::class)->name('product');

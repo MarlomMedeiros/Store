@@ -2,12 +2,19 @@
 
 namespace App\Http\Livewire\Index;
 
+use App\Models\Product;
 use Livewire\Component;
 
 class Index extends Component
 {
+    public function mount()
+    {
+    }
+
     public function render()
     {
-        return view('livewire.index.index');
+        $products = Product::All();
+
+        return view('livewire.index.index', compact('products'));
     }
 }

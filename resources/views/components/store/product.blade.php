@@ -1,4 +1,4 @@
-<div class="bg-white select-none relative inline-block m-1 w-72 h-[470px] cursor-pointer hover:drop-shadow-lg transition duration-300 rounded-md mt-4 border">
+<a href="{{ $action }}" class="bg-white select-none relative inline-block m-1 w-72 h-[470px] cursor-pointer hover:drop-shadow-lg transition duration-300 rounded-md mt-4 border">
     <div class="m-16">
         <img src="{{ asset($img) }}" alt="{{ $title }}" title="{{ $title }}" class="w-full h-full">
     </div>
@@ -6,7 +6,7 @@
         {{ $title }}
     </p>
     <div class="font-extrabold mx-4 text-xl text-orange-500">
-        {{ $price }}
+        R$ {{ $price }}
     </div>
     <div class="mx-4 font-medium text-xs text-gray-400">
         {{ $descont }}
@@ -15,4 +15,4 @@
         <x-icon.heroicons.solid.shopping-cart class="h-5 w-5 mr-1"/>
         {{ $button }}
     </div>
-</div>
+</a>
