@@ -22,7 +22,7 @@
                     </div>
                     <div class="transition-all md:flex mt-2">
                         <a class="transition-all flex-none text-orange-500 xl:mr-60 mr-8 font-black text-4xl">
-                            R$ {{ $product->price }}
+                            R$ {{ number_format($product->price, 2, ',', '.') }}
                         </a>
                         <div class="transition-all my-2 flex items-center justify-center">
                             <x-button wire:click="setCookie()" class="rounded-md bg-orange-500 lg:w-42 lg:h-12 lg:px-4 w-full h-full py-2"/>

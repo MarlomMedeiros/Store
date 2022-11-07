@@ -16,12 +16,7 @@
         <div class="bg-[#0060b1] w-auto h-24">
             <div class="flex p-6 justify-center">
                 <a href="{{ route('home') }}" class="text-4xl font-bold text-white cursor-pointer">LOGO</a>
-                <label class="relative block w-full lg:w-1/3">
-                    <div>
-                        <x-icon.heroicons.solid.search viewBox="0 -4 30 30" class="w-9 h-11 absolute inset-y-0 rounded-r-lg -right-[52px] bg-white flex items-center cursor-pointer"/>
-                        <input class="ml-4 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1)] h-max placeholder:text-lg placeholder:text-gray-500 w-full bg-white rounded-l-lg py-3 pl-4 focus:outline-none text-sm" placeholder="busque aqui" type="text" name="search"/>
-                    </div>
-                </label>
+                <livewire:search />
                 @if(!request()->routeIs('login'))
                     @if(\Illuminate\Support\Facades\Auth::check())
                         <div class="flex-col flex justify-center">

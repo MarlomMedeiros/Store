@@ -45,7 +45,7 @@
                         Preço à vista no PIX:
                     </div>
                     <div class="text-gray-700 text-lg font-extrabold text-orange-500">
-                        R$ {{ number_format($product->price,2,",",".") }}
+                        R$ {{ number_format($product->price, 2, ",", ".") }}
                     </div>
                 </div>
                 <div wire:click="removeCartItem({{ $product->id }})">

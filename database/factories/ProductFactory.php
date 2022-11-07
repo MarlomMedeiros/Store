@@ -19,7 +19,7 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            'name'            => 'Processador AMD Ryzen 5 5500, 3.6GHz (4.2GHz Max Turbo), Cache 19MB, AM4, Sem Vídeo - 100-100000457BOX',
+            'name'            => $this->faker->name,
             'price'           => $this->faker->randomFloat(2, 1.00, 3000.00),
             'amount'          => $this->faker->randomNumber(),
             'manufacturer'    => $this->faker->colorName(),

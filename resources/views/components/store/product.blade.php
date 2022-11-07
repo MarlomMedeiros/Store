@@ -6,7 +6,7 @@
         {{ $title }}
     </p>
     <div class="font-extrabold mx-4 text-xl text-orange-500">
-        R$ {{ $price }}
+        R$ {{ number_format($price, 2, ',', '.') }}
     </div>
     <div class="mx-4 font-medium text-xs text-gray-400">
         {{ $descont }}
