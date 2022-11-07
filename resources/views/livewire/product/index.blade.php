@@ -25,7 +25,7 @@
                             R$ {{ $product->price }}
                         </a>
                         <div class="transition-all my-2 flex items-center justify-center">
-                            <x-button class="rounded-md bg-orange-500 lg:w-42 lg:h-12 lg:px-4 w-full h-full py-2"/>
+                            <x-button wire:click="setCookie()" class="rounded-md bg-orange-500 lg:w-42 lg:h-12 lg:px-4 w-full h-full py-2"/>
                         </div>
                     </div>
                     <div>

@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Livewire\Auth\AccessAccount;
-use App\Http\Livewire\Product\Index;
+use App\Http\Livewire\Cart;
+use App\Http\Livewire\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +24,5 @@ Route::get('/logout', function () {
     return redirect()->route('home');
 })->name('logout');
 
-Route::get('/produto/{product}/{name}', Index::class)->name('product');
+Route::get('/produto/{product}/{name}', Product\Index::class)->name('product');
+Route::get('/carrinho', Cart\Index::class)->name('cart');

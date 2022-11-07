@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html class="bg-white" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html class="bg-gray-100" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
 
-    <style>
-        [x-cloak] {
-            display: none;
-        }
-    </style>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -47,6 +42,12 @@
                         </div>
                     @endif
                 @endif
+                <div class="cursor-pointer relative flex items-baseline lg:items-center pt-1 text-white ml-1 lg:ml-16">
+                    <a href="{{ route('cart') }}">
+                        <x-icon.heroicons.solid.shopping-cart class="lg:h-8 lg:w-8 w-10 h-10"/>
+                        <livewire:cart.show/>
+                    </a>
+                </div>
             </div>
         </div>
 
