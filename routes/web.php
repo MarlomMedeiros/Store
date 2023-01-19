@@ -3,6 +3,7 @@
 use App\Http\Livewire\Auth\AccessAccount;
 use App\Http\Livewire\Cart;
 use App\Http\Livewire\Product;
+use App\Http\Livewire\Profile\Index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,5 @@ Route::get('/logout', function () {
 
 Route::get('/produto/{product}/{name}', Product\Index::class)->name('product');
 Route::get('/carrinho', Cart\Index::class)->name('cart');
+Route::get('/busca/{result?}', App\Http\Livewire\Search\Index::class)->name('search');
+Route::get('/minha-conta', Index::class)->name('profile');

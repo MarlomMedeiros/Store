@@ -24,7 +24,7 @@
                                 Olá, {{ \Illuminate\Support\Facades\Auth::user()->name }}
                             </a>
                             <div class="flex grid md:grid-cols-2 md:divide-x">
-                                <a class="font-normal text-sm text-white cursor-pointer hover:underline lg:ml-20 lg:pr-1">Minha Conta</a>
+                                <a href="{{ route ('profile') }}" class="font-normal text-sm text-white cursor-pointer hover:underline lg:ml-20 lg:pr-1">Minha Conta</a>
                                 <a href="{{ route('logout') }}" class="font-normal text-sm text-white cursor-pointer hover:underline lg:pl-1">Deslogar</a>
                             </div>
                         </div>
@@ -48,9 +48,7 @@
 
         <div class="w-auto flex justify-center bg-orange-500 h-10">
             <div class="grid grid-cols-6 divide-x divide-gray-100/40 uppercase text-xs  md:text-[0.875rem] bg-orange-500 h-10 font-bold text-white">
-                <a class="h-full flex justify-center items-center gar align-middle cursor-pointer hover:bg-orange-600 text-center p-0.5 px-8">
-                    Novidades
-                </a>
+                <livewire:menu />
                 <a class="h-full flex justify-center items-center gar align-middle cursor-pointer hover:bg-orange-600 text-center p-0.5">
                     Destaques
                 </a>

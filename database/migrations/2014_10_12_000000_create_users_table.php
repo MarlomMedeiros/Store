@@ -17,6 +17,9 @@ return new class extends Migration {
             $table->string('name');
             $table->string('email')->unique();
             $table->string('identification')->unique();
+            $table->string('cellphone')->nullable();
+            $table->date('birthday')->nullable();
+            $table->boolean('send_offers')->default(false);
             $table->string('cep');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

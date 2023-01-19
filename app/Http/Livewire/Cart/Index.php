@@ -56,6 +56,7 @@ class Index extends Component
             } else {
                 if ($result->quantity <= 1) {
                     $this->removeCartItem($productID);
+
                     return;
                 }
                 $result->quantity += $amount;
