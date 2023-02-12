@@ -1,64 +1,17 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<div style="font-size: 16px; line-height: 1.5; color: #333; text-align: center;">
+  <h3 style="font-size: 22px; font-weight: bold; margin-bottom: 20px;">🛍️ Loja Online Inspirada na Kabum</h3>
+  <p>Como programador web, criei uma loja online inspirada na Kabum. Utilizei o Laravel como framework principal, juntamente com PHP, JavaScript, TailwindCSS, Livewire e AlpineJS. Todos os códigos e componentes foram desenvolvidos por mim 💪, visando demonstrar minhas habilidades e conhecimentos na área de desenvolvimento web 💻. Este projeto é uma amostra da minha capacidade de criar soluções completas e eficientes, desde a programação até a interface do usuário 🚀.</p>
+</div>
+<h4 style="margin-top: 30px; font-size: 18px; font-weight: bold;">💻 Laravel</h4>
+<p style="font-size: 16px; line-height: 1.5; color: #333;">Laravel é um framework de aplicações web de código aberto, escrito em PHP. Ele foi criado com o objetivo de ajudar os desenvolvedores a criar aplicações web de forma mais rápida e fácil. Além disso, ele fornece vários recursos e ferramentas para ajudar a melhorar a segurança, escalabilidade e manutenibilidade do projeto.</p>
+<h4 style="margin-top: 30px; font-size: 18px; font-weight: bold;">🛠️ PHP</h4>
+<p style="font-size: 16px; line-height: 1.5; color: #333;">PHP é uma linguagem de programação de propósito geral, especialmente adequada para o desenvolvimento de aplicações web. Ele é uma das linguagens mais populares e amplamente utilizadas na web, permitindo a criação de páginas dinâmicas e interativas. Ao usar PHP no desenvolvimento da loja online, eu pude aproveitar sua facilidade de uso e recursos para criar uma aplicação completa e funcional.</p>
+<h4 style="margin-top: 30px; font-size: 18px; font-weight: bold;">🚀 JavaScript</h4>
+<p style="font-size: 16px; line-height: 1.5; color: #333;">JavaScript é uma linguagem de programação interpretada e de alto nível, amplamente utilizada na web para adicionar interatividade e dinamismo às páginas. Ao usar JavaScript neste projeto, eu pude implementar recursos avançados na interface do usuário, como validações de formulários, animações, e muito mais. Além disso, a integração do JavaScript com o Laravel e o PHP tornou o desenvolvimento ainda mais eficiente e fácil.</p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<h4 style="margin-top: 30px; font-size: 18px; font-weight: bold;">🎨 TailwindCSS</h4>
+<p style="font-size: 16px; line-height: 1.5; color: #333;">TailwindCSS é um framework de estilo CSS que fornece uma série de classes pré-definidas para ajudar na criação de interfaces visuais modernas e atraentes. Ao usar TailwindCSS neste projeto, eu pude criar uma interface de usuário rica e responsiva com muita facilidade e agilidade.</p>
+<h4 style="margin-top: 30px; font-size: 18px; font-weight: bold;">💻 Livewire</h4>
+<p style="font-size: 16px; line-height: 1.5; color: #333;">Livewire é uma biblioteca PHP para o Laravel que permite a criação de componentes dinâmicos na interface do usuário sem precisar recarregar a página. Ao usar Livewire neste projeto, eu pude adicionar recursos avançados na interface do usuário, como busca em tempo real, filtros, e muito mais, sem prejudicar a performance da aplicação.</p>
+<h4 style="margin-top: 30px; font-size: 18px; font-weight: bold;">🚀 AlpineJS</h4>
+<p style="font-size: 16px; line-height: 1.5; color: #333;">AlpineJS é uma biblioteca JavaScript que permite a criação de componentes interativos na interface do usuário de forma simples e eficiente. Ao usar AlpineJS neste projeto, eu pude adicionar recursos avançados na interface do usuário, como modais, dropdowns, e muito mais, sem precisar escrever grandes quantidades de código JavaScript.</p>
